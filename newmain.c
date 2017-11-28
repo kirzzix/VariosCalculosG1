@@ -24,7 +24,10 @@ int Comprobacion(int *x )
 
 {
     
+    int numero;
+    scanf("%i", &numero);
     
+  
     
     
     
