@@ -11,7 +11,7 @@ int NumRomanos (void)
     int numero, iunidades, idecenas, icentenas, imiles;
     float resto_miles, resto_centenas, resto_decenas;
     enum boolean {false = 0, true = 1}; 
-    enum boolean convertible; //variable booleana11
+    enum boolean convertible; //variable booleana
     
     // Declaracion de array bidimensional (Columna[4],Fila[10]).
     char *conversion[4][10];
