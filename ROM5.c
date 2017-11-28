@@ -22,28 +22,7 @@ int NumRomanos (void)
                        
     
     // Comprobamos si el nÃºmero es vÃ¡lido.
-    if(numero == 0)
-    {
-        printf("El numero 0 no se puede representar.\n");
-        convertible == false;
-    }
-    /*if(numero != (int)numero) // falta sacar la parte entera de nÃºmero
-    {
-        printf("El nÃºmero debe ser entero.\n");
-        convertible == false;
-    }*/
-    if(numero > 3000)
-    {
-        printf("El número debe ser menor o igual a 3000.\n");
-        convertible == false;
-    }
-    if(numero < 0)
-    {
-        printf("El número debe ser positivo.\n");
-        convertible == false;
-    }
-    if (convertible == true)
-    {
+
     // Realizamos los cÃ¡lculos para ir fragmentando el nÃºmero.
     // Miles:
     imiles = numero/1000;
