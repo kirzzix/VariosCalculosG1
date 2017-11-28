@@ -11,8 +11,6 @@ int NumRomanos (void)
 {
     int numero, iunidades, idecenas, icentenas, imiles;
     float resto_miles, resto_centenas, resto_decenas;
-    enum boolean {false = 0, true = 1}; 
-    enum boolean convertible; //variable booleana
     
     // Declaracion de array bidimensional (Columna[4],Fila[10]).
     char *conversion[4][10];
@@ -21,8 +19,7 @@ int NumRomanos (void)
     // Pedimos introducir el numero a calcular.
     printf("Introduzca un numero entre 1 y 3000: \n ");
     scanf("%i", &numero);
-                   
-    convertible = true;      
+                       
     
     // Comprobamos si el nÃºmero es vÃ¡lido.
     if(numero == 0)
@@ -100,8 +97,7 @@ int NumRomanos (void)
     conversion[3][9] = "IX";
          
     // Mostramos los dÃ­gitos convertidos a romanos.
-    printf("%s %s %s %s \n", conversion[0][imiles],conversion[1][icentenas],
-                          conversion[2][idecenas],conversion[3][iunidades]);
+    printf("%s %s %s %s \n", conversion[0][imiles],conversion[1][icentenas],conversion[2][idecenas],conversion[3][iunidades]);
     }
 return 0; 
 }  
