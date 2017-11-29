@@ -13,62 +13,117 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 
-/*
- * 
- */
-int Calcular_Nif (int *y);  // funcion para calcular el Nif
-int Romanos (int *z);   //funcion para calcular en romanos
 
-int Comprobacion(int *x ) 
+
+int Romanos(int *x);//Esta funcion manda a la funcion romanos el numero despues de hecha la comprobacion
+int Nif (int *y);//Esta funcion manda a la funcion Nif el numero despues de hecha la comprobacion
+int Billetes (int *b); //Esta funcion manda a la funcion Billetes el numero despues de hecha la comprobacion.
+int Imc (int *i); //Esta funcion manda a la funcion Imc el numero despues de hecha la comprobacion
+
+int Comprobacion ( int *z)//Se reciben los valores del menu de la main con un puntero
+
 
 {
+    char numero[9]; //Recibimos el numero en esta variable?¿?
     
-    int numero;
-    scanf("%i", &numero);
-    
-  
-    
+    int longitud;
+    int control = 0;
     
     
-    if (*x==1) //cuando elegimos 1 en el menu comprueba que este entre los parametros 1 y 99999999
-                // si es asi, llamamos la funcion Dni
+    //printf("Esta es \n");
+    scanf("%s", &numero);
+    longitud = strlen(numero);      //longitud toma el valor del numero de caracteres
+    printf( "strlen(numero) = %d\n", strlen(numero) );
+
+    printf("Esta es la longitud %i\n",longitud);
+   
+for (int a=0;a <= longitud ;a++) //Comprobamos uno a uno si son numeros
     {
+        if (isdigit(numero[a]))
+        {
+            printf("Este es el valor que está cogiendo %c\n",numero[a]);
+            control++;
+            if (a == longitud)
+            {
+                break;
+            }
+        }else{
+                printf("Numero erroneo. \n Introduzca de nuevo el número\n");
+            break;
+        }
+      
+  
+           
+    }
+if (control == longitud)
+    {
+        int numeras = atoi(numero);
+        printf("Este es el numero %i\n",numeras);
+        if (*z == 1)
+        {
+            if (( numeras > 0) && ( numeras <= 99999999))
+            {
+               Nif(&numeras); //nif(numeras);
+            }
+            else{
+                printf("Introduzca un valor comprendido entre 00000001 y 99999999");
+            }
+        }
+        if (*z == 2)
+        {
+            if ((( numeras > 0) && ( numeras <= 3999))  )
+            {
+                Romanos(&numeras);
+            }
+            else{
+                printf("Introduzca un número entero válido comprendido entre 1 y 3999");
+            }
+        }
+        if (*z == 3)
+        {
+            if ((( numeras > 0) && ( numeras <= 3999))  )
+            {
+                Romanos(&numeras);
+            }
+            else{
+                printf("Introduzca un número entero válido comprendido entre 1 y 3999");
+            }
+        }
         
-        if (numero>=1 && numero<=99999999) 
-          {
-              Calcular_Nif (&numero);
-          }
-          else
-          {
-              printf(" numero erroneo introduzca otra vez");
-              
-                           
-              
-    }
-    }
-    
-    
-    if (*x==2) //cuando elegimos 2 en el menu comprueba que este entre los parametros 1 y 3.999
-                // si es asi, llamamos la funcion romanos
-    { 
+         if (*z == 4)
+        {
+            if ((( numeras > 0) && ( numeras <= 3999))  )
+            {
+                Romanos(&numeras);
+            }
+            else{
+                printf("Introduzca un número entero válido comprendido entre 1 y 3999");
+            }
         
-          if (numero>=1 && numero<=3999) 
-          {
-              Romanos (&numero);
-          }
-          else
-          {
-              printf("Numero para convertir a romano erroneo.\n Introduzca un numero entre el 0 y el 3999");
-    }
-    }
-    
-
-    
-    
-             
-
-    return (0);
+        
+        
+      
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 }
-
-
+ 
+    return(0);
+}
