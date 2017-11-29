@@ -7,9 +7,8 @@
 
 #include <stdio.h> 
  
-int maxbillete (int argc, char *argv[]) 
+int maxbillete (int dinero) 
 { 
-    int dinero; 
     int billetes_500 = 0; 
     int billetes_200 = 0; 
     int billetes_100 = 0; 
@@ -19,8 +18,6 @@ int maxbillete (int argc, char *argv[])
     int billetes_5 = 0; 
     int monedas_2 = 0; 
     int monedas_1 = 0; 
-    printf("Introduce la cantidad ---> "); 
-    scanf("%d", &dinero); 
     for (dinero; dinero >= 500 ;) 
     { 
         billetes_500 += 1; 
