@@ -7,7 +7,7 @@
 
 #include <stdio.h> 
  
-int main(int argc, char *argv[]) 
+int maxbillete (int argc, char *argv[]) 
 { 
     int dinero; 
     int billetes_500 = 0; 
