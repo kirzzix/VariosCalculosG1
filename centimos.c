@@ -59,5 +59,5 @@ int centimos(char sueldo[]) {
     
 
 
-    return (mn050,mn020,mn010,mn005,mn002,mn001);
+    //return (mn050,mn020,mn010,mn005,mn002,mn001);
 }
