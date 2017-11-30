@@ -12,7 +12,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-//int comprobante(int z, char p[]);
+//int comprobante(int z, char p[],char y[]);
 int main() {
     int numerico;
     char numero1[20]; //Declaramos las variables como cadenas para poder después desglosar el número en dígitos
@@ -21,8 +21,12 @@ int main() {
   do
   {
        system("CLEAR"); //Limpiar pantalla cada vez que se ejecute el bucle
-        printf("Seleccione la opción correspondiente a la aplicación que vaya a usar\n1. Obtención letra DNI\n2. Cálculo de números romanos\n");
-        printf("3. Calculo IMC\n4. Número de billetes\n0. Finalizar\n");
+        printf("Seleccione la opción correspondiente a la aplicación que vaya a usar\n");
+        printf("1. Obtención letra DNI\n");
+        printf("2. Cálculo de números romanos\n");
+        printf("3. Calculo IMC\n");
+        printf("4. Número de billetes\n");
+        printf("0. Finalizar\n");
         scanf("%i",&numerico);
         switch(numerico)
         {
