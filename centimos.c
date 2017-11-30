@@ -63,5 +63,5 @@ int centimos(char sueldo[]) {
     
 
 
-    return (resultado);
+    //return (resultado);
 }
