@@ -1,5 +1,5 @@
 /* 
- * File:   main.c
+ * File:   centimos.c
  * Author: juanmi
  *
  * Created on 28 de noviembre de 2017, 12:48
@@ -9,8 +9,13 @@
 #include <stdlib.h>
 #include <math.h>
 
-int centimos(float sueldo) {
-    float sueldoinicial;
+
+int centimos(char sueldo[]) {
+    
+    
+    
+    
+    double sueldoinicial;
     double sueldoentero,sueldodecimales;
     int mn050,mn020,mn010,mn005,mn002,mn001;
     int resto;
@@ -20,7 +25,9 @@ int centimos(float sueldo) {
     //printf ("sueldoinicial= %0.2f \n",sueldoinicial);
     //calcular el sueldo para los decimales;
     
-    sueldodecimales=(modf(sueldoinicial,&sueldoentero)*100.5);
+    sueldoinicial=atof(sueldo);
+    
+    sueldodecimales=modf(sueldoinicial,&sueldoentero)*100.5;
     //modf vale para truncar el numero;esta incluido en math.h
     //multiplico por 100.5 para evitar redondeo
     
