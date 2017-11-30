@@ -19,6 +19,10 @@ int centimos(char sueldo[]) {
     double sueldoentero,sueldodecimales;
     int mn050,mn020,mn010,mn005,mn002,mn001;
     int resto;
+    int resultado[6];//vector con los resultados para poder pasar todos los valores en el return;
+    //declarando los valores en la posicion del vector correspòndiente
+    resultado[0]=mn50;resultado[1]=mn20;resultado[2]=mn10;resultado[3]=mn010;
+    resultado[4]=mn005;resultado[5]=mn002;resultado[6]=mn001;
     
     //printf("Introduzca sueldo:\n");
     //scanf("%f",&sueldoinicial);
@@ -59,5 +63,5 @@ int centimos(char sueldo[]) {
     
 
 
-    return (mn050,mn020,mn010,mn005,mn002,mn001);
+    return (resultado);
 }
