@@ -10,7 +10,7 @@
 #include <math.h>
 
 
-int centimos(char sueldo[]) {
+void centimos(float sueldo) {
     
     
     
@@ -19,18 +19,11 @@ int centimos(char sueldo[]) {
     double sueldoentero,sueldodecimales;
     int mn050,mn020,mn010,mn005,mn002,mn001;
     int resto;
-    int resultado[6];//vector con los resultados para poder pasar todos los valores en el return;
-    //declarando los valores en la posicion del vector correspòndiente
-    resultado[0]=mn50;resultado[1]=mn20;resultado[2]=mn10;resultado[3]=mn010;
-    resultado[4]=mn005;resultado[5]=mn002;resultado[6]=mn001;
     
-    //printf("Introduzca sueldo:\n");
-    //scanf("%f",&sueldoinicial);
-    //printf ("sueldoinicial= %0.2f \n",sueldoinicial);
+    
+    //sueldoinicial=atof(sueldo); funcion que cambia un char a float
+   
     //calcular el sueldo para los decimales;
-    
-    sueldoinicial=atof(sueldo);
-    
     sueldodecimales=modf(sueldoinicial,&sueldoentero)*100.5;
     //modf vale para truncar el numero;esta incluido en math.h
     //multiplico por 100.5 para evitar redondeo
@@ -38,30 +31,20 @@ int centimos(char sueldo[]) {
     
     //calculo de las monedas de centimo;
     mn050=sueldodecimales/50;
-    //printf("centimos de 50: \t %i \n ",mn050);
+    printf("centimos de 50: \t %i \n ",mn050);
     resto=sueldodecimales-(mn050*50);
     mn020=resto/20;
-    //printf("centimos de 20: \t %i \n ",mn020);
+    printf("centimos de 20: \t %i \n ",mn020);
     resto= resto -(mn020*20);
     mn010=resto/10;
-    //printf("centimos de 10: \t %i \n ",mn010);
+    printf("centimos de 10: \t %i \n ",mn010);
     resto= resto -(mn010*10);
     mn005= resto/5;
-    //printf("centimos de 5: \t %i \n ", mn005);
+    printf("centimos de 5: \t %i \n ", mn005);
     resto= resto-(mn005*5);
     mn002= resto/2;
-    //printf("centimos de 2: \t %i \n ", mn002);
+    printf("centimos de 2: \t %i \n ", mn002);
     resto=resto-(mn002*2);
     mn001=resto;
-    //printf("centimos de 1: \t %i \n", mn001);
-
-
-
-
-
-
-    
-
-
-    //return (resultado);
+    printf("centimos de 1: \t %i \n", mn001);
 }
