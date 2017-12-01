@@ -13,12 +13,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-//int comprobante(int z, char p[],char y[]);
+int validar(int menu, char cadena1[],char cadena2[]);
+void romanos(int j);
+void nif(int x);
 int main() {
     int numerico;
     char numero1[20]; //Declaramos las variables como cadenas para poder después desglosar el número en dígitos
-    char numero2[20];
+    char numero2[20]="34567";
     int control; //Variable para indicar después que el bucle siga
+    int valor;
   do
   {
        system("CLEAR"); //Limpiar pantalla cada vez que se ejecute el bucle
@@ -34,20 +37,23 @@ int main() {
             case 1 :
                 printf("Indique el numero de DNI\n");
                 scanf("%s", &numero1);
-                /*if (comprobante(numerico,numero1))
+                if (validar(numerico,numero1,numero2)==1 )
                 {
-                    //operación del DNI
-                }*/
-                printf("Operación DNI\n");
+                    printf("Operación DNI\n");
+                    valor=atoi(numero1);
+                    nif(valor);
+                    
+                }
+                
                 break;
             case 2 :
                 printf("Indique el numero a transformar en romano\n");
                 scanf("%s", &numero1);
-                /*if (comprobante(numerico,numero1))
+                if (validar(numerico,numero1,numero2)==1)
                 {
-                    //operación de los romanos
-                }*/
-                printf("Operación Romanos\n");
+                    printf("Operación Romanos\n");
+                }
+
                 break;
             case 3 :
                 printf("Indique el peso\n");
@@ -61,20 +67,20 @@ int main() {
                     printf("Número erroneo introduzca de nuevo la altura\n");
                 }
                 }while (atof(numero2) >= 3);
-                printf("Operación del IMC \n");
-                /*if (comprobante(numerico,numero1,numero2))
+                
+               if (validar(numerico,numero1,numero2)==1)
                 {
-                    //operación del IMC
-                }*/
+                    printf("Operación del IMC \n");
+                }
                 break;
              case 4 :
                 printf("Indique el sueldo\n");
                 scanf("%s", &numero1);
-                /*if (comprobante(numerico,numero1))
+                if (validar(numerico,numero1,numero2)==1)
                 {
-                    //operación de los billetes                
-                }*/
-                printf("Operación de los billetes \n");
+                     printf("Operación de los billetes \n");            
+                }
+
                 break;
                                    
   
