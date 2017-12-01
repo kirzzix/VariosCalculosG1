@@ -12,6 +12,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 //int comprobante(int z, char p[],char y[]);
 int main() {
     int numerico;
@@ -55,11 +56,11 @@ int main() {
                 {
                 printf("Indique la altura en metros usando el punto como separador decimal \n");
                 scanf("%s", &numero2);
-                if (atoi(numero2) >=2) 
+                if (atof(numero2) >=3) 
                 {
                     printf("Número erroneo introduzca de nuevo la altura\n");
                 }
-                }while (atoi(numero2) >= 3);
+                }while (atof(numero2) >= 3);
                 printf("Operación del IMC \n");
                 /*if (comprobante(numerico,numero1,numero2))
                 {
