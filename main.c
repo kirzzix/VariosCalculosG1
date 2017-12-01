@@ -12,10 +12,12 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 #include <math.h>
 int validar(int menu, char cadena1[],char cadena2[]);
 void romanos(int j);
-void nif(int x);
+//void numerodni(int numtodni);
 int main() {
     int numerico;
     char numero1[20]; //Declaramos las variables como cadenas para poder después desglosar el número en dígitos
@@ -34,24 +36,28 @@ int main() {
         scanf("%i",&numerico);
         switch(numerico)
         {
-            case 1 :
+            /*case 1 :
                 printf("Indique el numero de DNI\n");
                 scanf("%s", &numero1);
+                //int numeras = atoi(numero1);
+                
+                numerodni(valor);
                 if (validar(numerico,numero1,numero2)==1 )
                 {
                     printf("Operación DNI\n");
-                    valor=atoi(numero1);
-                    nif(valor);
+                    
+                    
                     
                 }
                 
-                break;
+                break;*/
             case 2 :
                 printf("Indique el numero a transformar en romano\n");
                 scanf("%s", &numero1);
-                if (validar(numerico,numero1,numero2)==1)
+                int numeras = atoi(numero1);
+                if (validar(numerico,numero1,numero2)==0)
                 {
-                    printf("Operación Romanos\n");
+                    romanos(numeras);
                 }
 
                 break;
@@ -68,7 +74,7 @@ int main() {
                 }
                 }while (atof(numero2) >= 3);
                 
-               if (validar(numerico,numero1,numero2)==1)
+               if (validar(numerico,numero1,numero2)==0)
                 {
                     printf("Operación del IMC \n");
                 }
@@ -76,7 +82,7 @@ int main() {
              case 4 :
                 printf("Indique el sueldo\n");
                 scanf("%s", &numero1);
-                if (validar(numerico,numero1,numero2)==1)
+                if (validar(numerico,numero1,numero2)==0)
                 {
                      printf("Operación de los billetes \n");            
                 }

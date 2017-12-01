@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 #include <stdio.h>
-void nif(int x){
+void numdni(int numtodni){
 int resto;
 const char *letra[23];
 letra[0] = "T";

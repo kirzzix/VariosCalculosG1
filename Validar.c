@@ -77,12 +77,12 @@ int validar(int menu,char cadena1[], char cadena2[])
             {                    
                 if (numero>=1 && numero<=99999999) 
                 {
-                    devolucion = 1;
+                    devolucion = 0;
                     return(devolucion);
                 }
             else
             {
-                devolucion=0; 
+                devolucion=1; 
                 return(devolucion);
             }
             }
@@ -90,12 +90,12 @@ int validar(int menu,char cadena1[], char cadena2[])
             {
                 if (numero>=1 && numero<=3999) 
                 {
-                    devolucion = 1;
+                    devolucion = 0;
                     return(devolucion);
                 }
             else
             {
-                    devolucion=0; 
+                    devolucion=1; 
                 return(devolucion);
             }
             }
@@ -103,12 +103,12 @@ int validar(int menu,char cadena1[], char cadena2[])
             {        
                 if ((numero>=5 && numero<=300)||(numero2 >= 30 && numero2 <= 250 )) //numero=peso; numero2=altura
                 {
-                    devolucion = 1;
+                    devolucion = 0;
                     return(devolucion);
                 }
             else
             {
-                devolucion=0; 
+                devolucion=1; 
                 return(devolucion);
             }
             }
@@ -118,12 +118,12 @@ int validar(int menu,char cadena1[], char cadena2[])
         
                 if (numero>=0 && numero<=12000)
                 {
-                    devolucion = 1;
+                    devolucion = 0;
                     return(devolucion);
                 }
             else
             {
-                devolucion=0; 
+                devolucion=1; 
                 return(devolucion);  
             }
             }   
