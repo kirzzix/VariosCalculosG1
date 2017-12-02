@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 #include <stdio.h>
-void numdni(int numtodni){
+void numerodni(int numtodni){
 int resto;
 const char *letra[23];
 letra[0] = "T";
@@ -30,7 +30,7 @@ letra[19] = "L";
 letra[20] = "C";
 letra[21] = "K";
 letra[22] = "E";
-resto = x % 23;
-printf("Su DNI completo es %i %s ",x,letra[resto]);
+resto = numtodni % 23;
+printf("Su DNI completo es %i %s ",numtodni,letra[resto]);
 //printf("%i",numero);
 }
