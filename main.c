@@ -36,7 +36,7 @@ int main() {
         scanf("%i",&numerico);
         switch(numerico)
         {
-            case 1 :
+            case 1 ://Caso DNI por probar que funcionaba el menú
                 printf("Indique el numero de DNI\n");
                 scanf("%s", &numero1);
                 numeras = atoi(numero1);
@@ -49,7 +49,7 @@ int main() {
                 }
                 
                 break;
-            case 2 :
+            case 2 ://Cuando selecciona el 2 empieza a hacer los pasos para ejecutar la función romanos
                 printf("Indique el numero a transformar en romano\n");
                 scanf("%s", &numero1);
                 numeras = atoi(numero1);
@@ -59,7 +59,7 @@ int main() {
                 }
 
                 break;
-            case 3 :
+            case 3 ://Cuando selecciona el 3 empieza a hacer los pasos para ejecutar la función del IMC
                 printf("Indique el peso\n");
                 scanf("%s", &numero1);
                 do 
@@ -77,7 +77,7 @@ int main() {
                     printf("Operación del IMC \n");
                 }
                 break;
-             case 4 :
+             case 4 : //Cuando selecciona el 4 empieza a hacer los pasos para ejecutar la función billetes
                 printf("Indique el sueldo\n");
                 scanf("%s", &numero1);
                 if (validar(numerico,numero1,numero2)==0)
