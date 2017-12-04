@@ -23,7 +23,6 @@ int main() {
     char numero1[20]; //Declaramos las variables como cadenas para poder después desglosar el número en dígitos
     char numero2[20]="34567";
     int control; //Variable para indicar después que el bucle siga
-    int valor;
     int numeras;
   do
   {
